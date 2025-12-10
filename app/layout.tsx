@@ -80,10 +80,10 @@ export const metadata: Metadata = {
     description: "Experience world-class dental care at OraPlus Dental Clinic in Bhubaneswar. Root canal, implants, cosmetic dentistry & more by Dr. Kanhu Keshav Mahapatra. Book now!",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/doctor1.png",
         width: 1200,
-        height: 630,
-        alt: "OraPlus Dental Clinic - Premium Dental Care in Bhubaneswar",
+        height: 1600,
+        alt: "Dr. Kanhu Keshav Mahapatra - Best Dentist in Bhubaneswar | OraPlus Dental Clinic",
       }
     ],
   },
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "OraPlus Dental - Best Dentist in Bhubaneswar",
     description: "Premium dental care in Bhubaneswar by Dr. Kanhu Keshav Mahapatra. Root canal, implants, Invisalign & cosmetic dentistry.",
-    images: ["/images/og-image.jpg"],
+    images: ["/images/doctor1.png"],
   },
   robots: {
     index: true,
