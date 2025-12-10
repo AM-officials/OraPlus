@@ -34,7 +34,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://oraplus.in"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://ora-plus-acue.vercel.app"),
   title: {
     default: "OraPlus Dental Clinic - Best Dentist in Bhubaneswar, Patia | Dr. Kanhu Keshav Mahapatra",
     template: "%s | OraPlus Dental - Best Dentist in Bhubaneswar"
