@@ -45,11 +45,11 @@ export default function DoctorsSection() {
   }
 
   return (
-    <section className="relative w-full py-28 md:py-40 bg-gradient-to-b from-white via-blue-50/20 to-white overflow-hidden" ref={ref}>
+    <section className="relative w-full py-28 md:py-40 bg-gradient-to-b from-white via-blue-50/20 to-white overflow-hidden overflow-x-clip" ref={ref}>
       {/* Premium Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-blue-200/20 rounded-full blur-3xl animate-morph"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-200/20 rounded-full blur-3xl animate-morph" style={{ animationDelay: '-4s' }}></div>
+        <div className="absolute top-0 right-0 w-[500px] md:w-[700px] h-[500px] md:h-[700px] bg-blue-200/20 rounded-full blur-3xl animate-morph"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-purple-200/20 rounded-full blur-3xl animate-morph" style={{ animationDelay: '-4s' }}></div>
         <div className="bg-dots absolute inset-0 opacity-20"></div>
       </div>
 
@@ -120,41 +120,41 @@ export default function DoctorsSection() {
                   A graduate of Kalinga Institute for Dental Sciences (KIDS), Bhubaneswar, Dr. Mahapatra has earned 20+ advanced certifications and continues to ground his care in both expertise and empathy.
                 </p>
 
-                <div className="grid grid-cols-2 gap-5 pt-4">
-                    <div className="flex items-center gap-4 p-5 rounded-2xl glass-ultra border border-blue-100/50 shadow-3d hover:shadow-3d-lg transition-all duration-300 hover:-translate-y-1">
-                        <div className="p-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg text-white">
-                            <GraduationCap className="h-6 w-6" />
+                <div className="grid grid-cols-2 gap-3 sm:gap-5 pt-4">
+                    <div className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-2xl glass-ultra border border-blue-100/50 shadow-3d hover:shadow-3d-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                        <div className="p-2 sm:p-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg text-white flex-shrink-0">
+                            <GraduationCap className="h-5 w-5 sm:h-6 sm:w-6" />
                         </div>
-                        <div>
-                            <p className="font-bold text-gray-900">Education</p>
-                            <p className="text-sm text-gray-600">MDS Endodontist, KIDS</p>
-                        </div>
-                    </div>
-                    <div className="flex items-center gap-4 p-5 rounded-2xl glass-ultra border border-purple-100/50 shadow-3d hover:shadow-3d-lg transition-all duration-300 hover:-translate-y-1">
-                        <div className="p-3 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl shadow-lg text-white">
-                            <Award className="h-6 w-6" />
-                        </div>
-                        <div>
-                            <p className="font-bold text-gray-900">Certifications</p>
-                            <p className="text-sm text-gray-600">20+ Advanced Certifications</p>
+                        <div className="min-w-0">
+                            <p className="font-bold text-gray-900 text-sm sm:text-base">Education</p>
+                            <p className="text-xs sm:text-sm text-gray-600 truncate">MDS Endodontist, KIDS</p>
                         </div>
                     </div>
-                    <div className="flex items-center gap-4 p-5 rounded-2xl glass-ultra border border-cyan-100/50 shadow-3d hover:shadow-3d-lg transition-all duration-300 hover:-translate-y-1">
-                        <div className="p-3 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl shadow-lg text-white">
-                            <Stethoscope className="h-6 w-6" />
+                    <div className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-2xl glass-ultra border border-purple-100/50 shadow-3d hover:shadow-3d-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                        <div className="p-2 sm:p-3 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl shadow-lg text-white flex-shrink-0">
+                            <Award className="h-5 w-5 sm:h-6 sm:w-6" />
                         </div>
-                        <div>
-                            <p className="font-bold text-gray-900">Experience</p>
-                            <p className="text-sm text-gray-600">5+ Years Practice</p>
+                        <div className="min-w-0">
+                            <p className="font-bold text-gray-900 text-sm sm:text-base">Certifications</p>
+                            <p className="text-xs sm:text-sm text-gray-600 truncate">20+ Advanced</p>
                         </div>
                     </div>
-                    <div className="flex items-center gap-4 p-5 rounded-2xl glass-ultra border border-amber-100/50 shadow-3d hover:shadow-3d-lg transition-all duration-300 hover:-translate-y-1">
-                        <div className="p-3 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl shadow-lg text-white">
-                            <Star className="h-6 w-6" />
+                    <div className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-2xl glass-ultra border border-cyan-100/50 shadow-3d hover:shadow-3d-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                        <div className="p-2 sm:p-3 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl shadow-lg text-white flex-shrink-0">
+                            <Stethoscope className="h-5 w-5 sm:h-6 sm:w-6" />
                         </div>
-                        <div>
-                            <p className="font-bold text-gray-900">Rating</p>
-                            <p className="text-sm text-gray-600">4.9/5 from Patients</p>
+                        <div className="min-w-0">
+                            <p className="font-bold text-gray-900 text-sm sm:text-base">Experience</p>
+                            <p className="text-xs sm:text-sm text-gray-600 truncate">5+ Years Practice</p>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-2xl glass-ultra border border-amber-100/50 shadow-3d hover:shadow-3d-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                        <div className="p-2 sm:p-3 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl shadow-lg text-white flex-shrink-0">
+                            <Star className="h-5 w-5 sm:h-6 sm:w-6" />
+                        </div>
+                        <div className="min-w-0">
+                            <p className="font-bold text-gray-900 text-sm sm:text-base">Rating</p>
+                            <p className="text-xs sm:text-sm text-gray-600 truncate">4.9/5 from Patients</p>
                         </div>
                     </div>
                 </div>

@@ -189,21 +189,21 @@ export default function DoctorsPage() {
               </div>
               
               {/* Achievement Cards */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 {achievements.map((item, idx) => (
                   <motion.div
                     key={idx}
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.6 + idx * 0.1 }}
-                    className="group p-5 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+                    className="group p-3 sm:p-5 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-500 hover:-translate-y-1 overflow-hidden"
                   >
-                    <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl w-fit mb-3 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                      <item.icon className="h-5 w-5 text-white" />
+                    <div className="p-2 sm:p-3 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl w-fit mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <item.icon className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                     </div>
-                    <p className="font-bold text-gray-900 text-lg">{item.value}</p>
-                    <p className="text-sm text-gray-600">{item.label}</p>
-                    <p className="text-xs text-gray-500 mt-1">{item.sublabel}</p>
+                    <p className="font-bold text-gray-900 text-sm sm:text-lg truncate">{item.value}</p>
+                    <p className="text-xs sm:text-sm text-gray-600 truncate">{item.label}</p>
+                    <p className="text-xs text-gray-500 mt-1 truncate hidden sm:block">{item.sublabel}</p>
                   </motion.div>
                 ))}
               </div>
