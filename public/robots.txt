@@ -1,0 +1,16 @@
+# OraPlus Dental Clinic - Robots.txt
+# https://oraplus.in
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://oraplus.in/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Disallow admin or private pages if any
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
