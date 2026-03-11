@@ -186,7 +186,7 @@ export default function HeroSection() {
                     transition={{ delay: 1.2 }}
                   >
                     <h3 className="text-lg md:text-2xl font-bold mb-1 text-gray-900">Dr. Kanhu Keshav Mahapatra</h3>
-                    <p className="text-xs md:text-sm text-gray-600 font-medium">Lead Dentist & Cosmetic Specialist</p>
+                    <p className="text-xs md:text-sm text-gray-600 font-medium">Lead Dentist & Root Canal Specialist</p>
                   </motion.div>
                 </div>
               </div>
