@@ -8,7 +8,7 @@ import Footer from "@/components/footer"
 import LoadingScreen from "@/components/loading-screen"
 import { LoadingProvider } from "@/contexts/loading-context"
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter"
@@ -108,7 +108,7 @@ export const metadata: Metadata = {
     canonical: "https://oraplus.in",
   },
   verification: {
-    google: "your-google-verification-code",
+    google: "18vhFl0Daxv7Da5VH8M0clYie1FwmIcoOvdayfgUdI4",
   },
   other: {
     "geo.region": "IN-OR",
@@ -138,7 +138,7 @@ export default function RootLayout({
               "logo": "https://oraplus.in/favicon.svg",
               "url": "https://oraplus.in",
               "telephone": "+91-8249736036",
-              "email": "[CLINIC_EMAIL]",
+              "email": "kkmahapatra2123@gmail.com",
               "hasMap": "https://maps.app.goo.gl/eUEASqsKF1wBzBVs8",
               "priceRange": "₹₹",
               "address": {
