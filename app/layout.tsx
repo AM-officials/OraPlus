@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     description: "Experience world-class dental care at OraPlus Dental Clinic in Bhubaneswar. Root canal, implants, cosmetic dentistry & more by Dr. Kanhu Keshav Mahapatra. Book now!",
     images: [
       {
-        url: "/images/doctor1.png",
+        url: "https://oraplus.in/images/doctor1.png",
         width: 1200,
         height: 1600,
         alt: "Dr. Kanhu Keshav Mahapatra - Best Dentist in Bhubaneswar | OraPlus Dental Clinic",
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "OraPlus Dental - Best Dentist in Bhubaneswar",
     description: "Premium dental care in Bhubaneswar by Dr. Kanhu Keshav Mahapatra. Root canal, implants, Invisalign & cosmetic dentistry.",
-    images: ["/images/doctor1.png"],
+    images: ["https://oraplus.in/images/doctor1.png"],
   },
   robots: {
     index: true,
@@ -135,8 +135,11 @@ export default function RootLayout({
               "@type": "Dentist",
               "name": "OraPlus Dental Clinic",
               "image": "https://oraplus.in/images/clinic-exterior.jpg",
+              "logo": "https://oraplus.in/favicon.svg",
               "url": "https://oraplus.in",
               "telephone": "+91-8249736036",
+              "email": "[CLINIC_EMAIL]",
+              "hasMap": "https://maps.app.goo.gl/eUEASqsKF1wBzBVs8",
               "priceRange": "₹₹",
               "address": {
                 "@type": "PostalAddress",
@@ -220,6 +223,27 @@ export default function RootLayout({
                   }
                 }
               ]
+            })
+          }}
+        />
+        {/* WebSite Schema for Sitelinks */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "OraPlus Dental Clinic",
+              "url": "https://oraplus.in",
+              "publisher": {
+                "@type": "Dentist",
+                "name": "OraPlus Dental Clinic"
+              },
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://oraplus.in/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
             })
           }}
         />

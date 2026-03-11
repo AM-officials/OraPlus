@@ -66,10 +66,10 @@ export default function HeroSection() {
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <span className="text-shadow-premium">Crafting Smiles,</span> <br />
+              <span className="text-shadow-premium">Best Dentist in</span> <br />
               <span className="relative inline-block">
                 <span className="text-gradient-animated bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
-                  Changing Lives
+                  Bhubaneswar
                 </span>
                 <motion.div 
                   className="absolute -bottom-2 md:-bottom-3 left-0 right-0 h-1 md:h-1.5 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 rounded-full"
@@ -166,7 +166,7 @@ export default function HeroSection() {
               <div className="aspect-[4/5] overflow-hidden relative group">
                 <Image
                   src={heroImageSrc}
-                  alt="Dr. Kanhu Keshav Mahapatra"
+                  alt="Dr. Kanhu Keshav Mahapatra - Best Dentist in Bhubaneswar at OraPlus Dental Clinic"
                   width={800}
                   height={1000}
                   className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110"

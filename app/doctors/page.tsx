@@ -61,6 +61,83 @@ export default function DoctorsPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Structured Data - BreadcrumbList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://oraplus.in"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Doctors",
+                "item": "https://oraplus.in/doctors"
+              }
+            ]
+          })
+        }}
+      />
+      {/* Structured Data - Person (Doctor) + Reviews */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Physician",
+            "name": "Dr. Kanhu Keshav Mahapatra",
+            "image": "https://oraplus.in/images/doctor1.png",
+            "url": "https://oraplus.in/doctors",
+            "jobTitle": "MDS Endodontist",
+            "description": "MDS Endodontist with 5+ years of experience in cosmetic and restorative dentistry at OraPlus Dental Clinic, Bhubaneswar.",
+            "medicalSpecialty": "Endodontics",
+            "worksFor": {
+              "@type": "Dentist",
+              "name": "OraPlus Dental Clinic",
+              "url": "https://oraplus.in"
+            },
+            "alumniOf": {
+              "@type": "EducationalOrganization",
+              "name": "Kalinga Institute for Dental Sciences (KIDS), Bhubaneswar"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Plot no 421, Kanan Vihar, Patia",
+              "addressLocality": "Bhubaneswar",
+              "addressRegion": "Odisha",
+              "postalCode": "751031",
+              "addressCountry": "IN"
+            },
+            "review": [
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Priya Sharma" },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "reviewBody": "Dr. Kanhu is the most gentle dentist I have ever visited. His root canal treatment was completely painless!"
+              },
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Rajesh Mohanty" },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "reviewBody": "Got my smile makeover done here. The results are amazing! Highly recommend OraPlus."
+              },
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Ananya Das" },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "reviewBody": "Finally found a dentist my kids love! Dr. Kanhu is so patient and kind with children."
+              }
+            ]
+          })
+        }}
+      />
       {/* Premium Hero Section */}
       <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
         {/* Premium gradient background */}

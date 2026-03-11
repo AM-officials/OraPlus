@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import Head from "next/head"
+
 import {
   Smile,
   Sparkles,
@@ -200,6 +200,74 @@ export default function ServicesPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Structured Data - BreadcrumbList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://oraplus.in"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://oraplus.in/services"
+              }
+            ]
+          })
+        }}
+      />
+      {/* Structured Data - Dental Services */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            ...[
+              { name: "Preventive Care", desc: "Regular checkups, cleanings, and fluoride treatments to prevent dental issues." },
+              { name: "Oral Exams", desc: "Comprehensive dental examinations including digital X-rays and 3D imaging." },
+              { name: "Gum Disease Treatment", desc: "Non-surgical and surgical treatments for periodontal disease." },
+              { name: "Pediatric Dentistry", desc: "Specialized gentle dental care for children of all ages." },
+              { name: "Teeth Whitening", desc: "Professional whitening treatments to brighten your smile safely." },
+              { name: "Veneers", desc: "Custom-made porcelain shells for a flawless smile." },
+              { name: "Invisalign", desc: "Clear aligners to straighten teeth discreetly without metal braces." },
+              { name: "Smile Makeovers", desc: "Combination of cosmetic procedures to transform your smile completely." },
+              { name: "Dental Implants", desc: "Gold standard for replacing missing teeth with natural-looking results." },
+              { name: "Crowns & Bridges", desc: "Restoring damaged teeth with durable, natural-looking prosthetics." },
+              { name: "Root Canal Therapy", desc: "Advanced pain-free root canal treatments to save infected teeth." },
+              { name: "Emergency Dentistry", desc: "Immediate care for toothaches, broken teeth, and dental emergencies." }
+            ].map(s => ({
+              "@context": "https://schema.org",
+              "@type": "MedicalProcedure",
+              "name": s.name,
+              "description": s.desc,
+              "procedureType": "http://schema.org/NoninvasiveProcedure",
+              "url": "https://oraplus.in/services",
+              "howPerformed": s.desc,
+              "provider": {
+                "@type": "Dentist",
+                "name": "OraPlus Dental Clinic",
+                "url": "https://oraplus.in",
+                "telephone": "+91-8249736036",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Plot no 421, Kanan Vihar, Patia",
+                  "addressLocality": "Bhubaneswar",
+                  "addressRegion": "Odisha",
+                  "postalCode": "751031",
+                  "addressCountry": "IN"
+                }
+              }
+            }))
+          ])
+        }}
+      />
       {/* Premium Hero Section */}
       <section className="relative py-24 md:py-36 lg:py-44 overflow-hidden">
         {/* Premium gradient background */}
@@ -237,9 +305,9 @@ export default function ServicesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <span className="text-white">World-Class </span>
+              <span className="text-white">Dental Services in </span>
               <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Dental Care
+                Bhubaneswar
               </span>
             </motion.h1>
             

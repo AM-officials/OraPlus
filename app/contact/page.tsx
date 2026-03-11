@@ -49,6 +49,30 @@ Message: ${message}`
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pb-16 md:pb-24">
+      {/* Structured Data - BreadcrumbList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://oraplus.in"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Contact",
+                "item": "https://oraplus.in/contact"
+              }
+            ]
+          })
+        }}
+      />
       {/* Hero Section */}
       <section className="relative py-20 md:py-28 lg:py-36 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white overflow-hidden">
         {/* Premium Background Effects */}
@@ -67,7 +91,7 @@ Message: ${message}`
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold tracking-tight mb-4 md:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-white">
-              Visit OraPlus
+              Contact OraPlus Dental Clinic, Bhubaneswar
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 max-w-2xl mx-auto leading-relaxed px-2">
               Experience world-class dental care in our modern, state-of-the-art facility. 
@@ -357,20 +381,21 @@ Message: ${message}`
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              "/insta/Screenshot 2025-12-09 123829.png",
-              "/insta/Screenshot 2025-12-09 123906.png",
-              "/insta/Screenshot 2025-12-09 123930.png",
-              "/clinic/IMG_20251209_101734-min.png"
-            ].map((src, idx) => (
+              { src: "/insta/Screenshot 2025-12-09 123829.png", alt: "OraPlus Dental Clinic Bhubaneswar - patient smile transformation" },
+              { src: "/insta/Screenshot 2025-12-09 123906.png", alt: "OraPlus Dental Clinic Bhubaneswar - dental treatment showcase" },
+              { src: "/insta/Screenshot 2025-12-09 123930.png", alt: "OraPlus Dental Clinic Bhubaneswar - clinic interior and equipment" },
+              { src: "/clinic/IMG_20251209_101734-min.png", alt: "OraPlus Dental Clinic exterior view in Patia, Bhubaneswar" }
+            ].map((img, idx) => (
               <Link 
                 key={idx} 
                 href="https://www.instagram.com/oraplus_dental" 
                 target="_blank"
+                rel="noopener noreferrer"
                 className="group relative aspect-square overflow-hidden rounded-xl bg-gray-100"
               >
                 <Image 
-                  src={src} 
-                  alt="Instagram Post" 
+                  src={img.src} 
+                  alt={img.alt} 
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                   sizes="(max-width: 768px) 50vw, 25vw"
